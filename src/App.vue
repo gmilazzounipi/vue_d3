@@ -3,15 +3,19 @@
     <h1>First project with D3 and Vue.js</h1>
     <p>{{numbers}}</p>
     <button @click="shuffleNumbers()">Shuffle</button>
+    <BarChartVisualizer :numbers="numbers"></BarChartVisualizer>
   </div>
 </template>
 
 <script>
+  import BarChartVisualizer from "@/components/BarChartVisualizer";
 const d3 = require('d3');
 
 export default {
   name: 'App',
   components: {
+    // eslint-disable-next-line vue/no-unused-components
+    BarChartVisualizer
   },
   data:function(){
     return{
